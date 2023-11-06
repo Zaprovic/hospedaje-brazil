@@ -1,0 +1,23 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+	imageUrl: ImageMetadata;
+	description: string;
+	title: string;
+}
+
+const { imageUrl, description, title } = Astro.props;
+---
+
+<figure>
+	<Image src={imageUrl} alt={description} class="rounded-lg" />
+	<div class="flex flex-col justify-center items-center gap-3">
+		<figcaption class="font-semibold mt-4">{title}</figcaption>
+
+		<button
+			class="bg-[#1c4324] text-white px-6 py-2 rounded-md hover:bg-[#6c7c6f] transition-all"
+			>More info</button
+		>
+	</div>
+</figure>

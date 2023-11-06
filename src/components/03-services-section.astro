@@ -1,0 +1,57 @@
+---
+import hotel02 from "../../public/images/hotel-02.jpg";
+import hotel03 from "../../public/images/hotel-03.jpg";
+import hotel04 from "../../public/images/hotel-04.jpg";
+import hotel05 from "../../public/images/hotel-05.jpg";
+import hotel06 from "../../public/images/hotel-06.jpg";
+import hotel07 from "../../public/images/hotel-07.jpg";
+import Card from "./card.astro";
+---
+
+<section class="p-6">
+	<h2 class="mb-8 text-center">Services</h2>
+
+	<div class="container grid">
+		<Card
+			imageUrl={hotel02}
+			description="Hotel Image"
+			title="Breathtaking Mountain Views"
+		/>
+		<Card
+			imageUrl={hotel03}
+			description="Hotel Image"
+			title="State of the Art Business Center"
+		/>
+		<Card
+			imageUrl={hotel04}
+			description="Hotel Image"
+			title="Efficient Airport Transfers"
+		/>
+		<Card
+			imageUrl={hotel05}
+			description="Hotel Image"
+			title="Personalized City Tours"
+		/>
+		<Card
+			imageUrl={hotel06}
+			description="Hotel Image"
+			title="Gourmet Breakfast Buffet"
+		/>
+		<Card
+			imageUrl={hotel07}
+			description="Hotel Image"
+			title="Relaxing Spa Packages"
+		/>
+	</div>
+</section>
+
+<style>
+	.container {
+		display: grid;
+		gap: 2.5rem;
+		grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+		place-items: center;
+		margin: 0 auto;
+		max-width: 1000px;
+	}
+</style>
