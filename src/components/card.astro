@@ -11,7 +11,11 @@ const { imageUrl, description, title } = Astro.props;
 ---
 
 <figure>
-	<Image src={imageUrl} alt={description} class="rounded-lg" />
+	<Image
+		src={imageUrl}
+		alt={description}
+		class="rounded-lg hover:scale-[.98] transition-all"
+	/>
 	<div class="flex flex-col justify-center items-center gap-3">
 		<figcaption class="font-semibold mt-4">{title}</figcaption>
 

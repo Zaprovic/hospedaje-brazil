@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import logoImage from "../../public/images/logo-hospedaje-brazil.jpg";
 import Facebook from "./icons/facebook.astro";
 import HamburguerMenu from "./icons/hamburguer-menu.astro";
 import Instagram from "./icons/instagram.astro";
@@ -6,12 +8,15 @@ import Twitter from "./icons/twitter.astro";
 ---
 
 <header class="flex justify-between items-center px-4 py-6">
-	<span>Hospedaje Brazil</span>
+	<figure class="justify-self-center">
+		<Image src={logoImage} alt={"Logo Hospedaje Brazil"} width={72} />
+	</figure>
 
-	<HamburguerMenu />
-
-	<nav class="hidden">
-		<ul>
+	<span class="sm:hidden">
+		<HamburguerMenu />
+	</span>
+	<nav class="hidden sm:flex items-center gap-6">
+		<ul class="flex gap-2 [&>li]:bg-white [&>li]:p-2 [&>li]:rounded-full">
 			<li>
 				<a href="/">
 					<Facebook />
@@ -29,6 +34,9 @@ import Twitter from "./icons/twitter.astro";
 			</li>
 		</ul>
 
-		<button>Book Now</button>
+		<button
+			class="bg-[#1c4324] text-white py-2 px-4 rounded-xl hover:bg-[#6c7c6f] transition-all"
+			>Book Now</button
+		>
 	</nav>
 </header>
