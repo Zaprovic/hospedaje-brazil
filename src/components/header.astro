@@ -1,6 +1,6 @@
 ---
-import { Image } from "astro:assets";
-import logoImage from "../../public/images/logo-hospedaje-brazil.jpg";
+// import { Image } from "astro:assets";
+// import logoImage from "../../public/images/logo-hospedaje-brazil.jpg";
 import Facebook from "./icons/facebook.astro";
 import HamburguerMenu from "./icons/hamburguer-menu.astro";
 import Instagram from "./icons/instagram.astro";
@@ -9,7 +9,8 @@ import Twitter from "./icons/twitter.astro";
 
 <header class="flex justify-between items-center px-4 py-6">
 	<figure class="justify-self-center">
-		<Image src={logoImage} alt={"Logo Hospedaje Brazil"} width={72} />
+		<!-- <Image src={logoImage} alt={"Logo Hospedaje Brazil"} width={72} /> -->
+		<p class="font-bold">Hospedaje Brazil</p>
 	</figure>
 
 	<span class="sm:hidden">
@@ -18,7 +19,11 @@ import Twitter from "./icons/twitter.astro";
 	<nav class="hidden sm:flex items-center gap-6">
 		<ul class="flex gap-2 [&>li]:bg-white [&>li]:p-2 [&>li]:rounded-full">
 			<li>
-				<a href="/">
+				<a
+					href="https://www.facebook.com/hospedaje.brazil.copacabana?fref=ts"
+					target="_blank"
+					no-referrer
+				>
 					<Facebook />
 				</a>
 			</li>

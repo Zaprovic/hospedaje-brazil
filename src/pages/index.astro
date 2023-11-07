@@ -2,6 +2,8 @@
 import MainSection from "../components/01-main-section.astro";
 import AboutSection from "../components/02-about-section.astro";
 import ServicesSection from "../components/03-services-section.astro";
+import LocationSection from "../components/05-location-section.astro";
+import Footer from "../components/footer.astro";
 import Header from "../components/header.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -11,9 +13,13 @@ import Layout from "../layouts/Layout.astro";
 
 	<main>
 		<MainSection />
-		<AboutSection />
-		<ServicesSection />
+
+		<div class="max-w-[1200px] mx-auto grid grid-cols-1 gap-16 px-6 py-10">
+			<AboutSection />
+			<ServicesSection />
+			<LocationSection />
+		</div>
 	</main>
 
-	<footer></footer>
+	<Footer />
 </Layout>
